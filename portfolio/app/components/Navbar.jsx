@@ -1,6 +1,5 @@
 'use client'
-import { XMarkIcon } from '@heroicons/react/16/solid'
-import React from 'react'
+import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const navLinks = [
@@ -26,12 +25,33 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className='ml-auto md:hidden'>
-        <button>
-            {navbarOpen ? <XMarkIcon/> : <Bars3Icon/>}
+        <button
+        onClick={() => setNavbarOpen(!navbarOpen)}
+        className='fixed top-4 right-4 z-50 flex items-center px-3 py-2 border cursor-pointer border-slate-200 hover:text-white hover:border-white'>
+            {navbarOpen ? (
+            <XMarkIcon className='h-5 w-5'/> )
+            :( 
+            <Bars3Icon className='h-5 w-5'/>
+            )}
         </button>
       </div>
+
+      {/* mobile menu*/}
+      {navbarOpen && (
+        <div className='fixed top-0 left-0 w-full py-20 space-y-6 z-40 backdrop-blur-md'>
+            <ul className='flex gap-4 flex-col text-center'>
+                {navLinks.map(({href, label}) => (
+                    <li key={href}>
+                        <a href={href} className='text-white text-lg'>
+                            {label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+      )}
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
