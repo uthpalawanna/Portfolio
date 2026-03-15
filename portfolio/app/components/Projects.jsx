@@ -1,7 +1,8 @@
 'use client'
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import Link from 'next/link'
 import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { motion, useInView } from 'framer-motion'
 
 const PROJECT_DATA = [
   {
@@ -9,14 +10,16 @@ const PROJECT_DATA = [
     title: 'Portfolio',
     description: 'A brief description of your first project.',
     image: '/1.png',
+    tag: ['All', 'web'],
     gitUrl: 'https://github.com/uthpalawanna/Portfolio.git',
     previewUrl: 'https://example.com',
   },
   {
     id: 2,
-    title: 'Online-Education-Learning-Platform',
+    title: 'Online-Learning-Platform',
     description: 'A brief description of your second project.',
     image: '/2.jpg',
+    tag: ['All', 'web'],
     gitUrl: 'https://github.com/uthpalawanna/ACADEMIA-Online-Education-Learning-Platform.git',
     previewUrl: 'https://example.com',
   },
@@ -25,32 +28,43 @@ const PROJECT_DATA = [
     title: 'Machine Learning + Web App',
     description: 'A brief description of your third project.',
     image: '/3.png',
+    tag: ['All', 'machine learning'],
     gitUrl: 'https://github.com/uthpalawanna/Diabetes-Prediction-System.git',
     previewUrl: 'https://example.com',
   },
   {
     id: 4,
     title: 'Mobile Application',
-    description: 'A brief description of your third project.',
+    description: 'A brief description of your fourth project.',
     image: '/4.png',
+    tag: ['All', 'mobile'],
     gitUrl: 'https://github.com',
     previewUrl: 'https://example.com',
   },
   {
     id: 5,
     title: 'Web Application',
-    description: 'A brief description of your third project.',
+    description: 'A brief description of your fifth project.',
     image: '/7.png',
+    tag: ['All', 'web'],
     gitUrl: 'https://github.com',
     previewUrl: 'https://example.com',
   },
 ]
 
 const Projects = () => {
-
   const [tag, setTag] = useState('All')
+  const ref = useRef(null)
+  const isInview = useInView(ref, { once: true })
 
-const filteredProjects = PROJECTS_DATA.filter((project) => project.tag.includes(tag))
+  const cardVariants = {
+    initial: {y: 50, opacity: 0},
+    animate: {y: 0, opacity:1}
+  }
+
+  const filteredProjects = PROJECT_DATA.filter((project) =>
+    project.tag.includes(tag)
+  )
 
   return (
     <section id="projects" className='container mt-10 mx-auto px-12 py-4'>
@@ -58,20 +72,31 @@ const filteredProjects = PROJECTS_DATA.filter((project) => project.tag.includes(
         My Projects
       </h2>
 
-      <div className='text-white flex flex-row justify-center item-center gap-2 py-6'>
+      <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
         {['All', 'web', 'mobile', 'machine learning'].map((tagName) => (
-          <button key={tagName}
-           className={'${tag === tagName ? 'text-white border-[#00adb5]' : 'text-[#adb7be] border-slate-600 hover:boeder-white'
-            } rounded-full border-2 px-6 py-3 text-xl cursor-pointer'}
+          <button
+            key={tagName}
+            className={`${
+              tag === tagName
+                ? 'text-white border-[#00adb5]'
+                : 'text-[#adb7be] border-slate-600 hover:border-white'
+            } rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
             onClick={() => setTag(tagName)}
+          >
             {tagName}
-            </button>
+          </button>
         ))}
       </div>
 
-      <ul className='grid md:grid-cols-3 gap-8 md:gap-12'>
-        {PROJECT_DATA.map((project, index) => (
-          <li key={index}>
+      <ul ref = {ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
+        {filteredProjects.map((project, index) => (
+          <motion.li key={index} 
+          variants={cardVariants} 
+          initial='initial' 
+          animate={isInview ? 'animate' : 'initial'} 
+          transition={{duration: 0.3, delay: index * 0.4}}
+          >
+
             <div className='relative group'>
               <div
                 className='h-52 md:h-72 rounded-t-xl'
@@ -82,7 +107,7 @@ const filteredProjects = PROJECTS_DATA.filter((project) => project.tag.includes(
                   backgroundSize: 'cover',
                 }}
               />
-              <div className='overlay items-center justify-center absolute top-0 left-0 w-full h-full 
+              <div className='overlay items-center justify-center absolute top-0 left-0 w-full h-full
                 bg-opacity-0 hidden group-hover:flex group-hover:opacity-90 group-hover:bg-[#181818] transition-all duration-500'>
                 <Link
                   href={project.gitUrl}
@@ -101,7 +126,7 @@ const filteredProjects = PROJECTS_DATA.filter((project) => project.tag.includes(
               <h5 className='text-xl font-semibold mb-2'>{project.title}</h5>
               <p className='text-[#adb7be]'>{project.description}</p>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>
