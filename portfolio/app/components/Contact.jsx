@@ -93,9 +93,9 @@ const Contact = () => {
 
             <button
               type='submit'
-              className='w-full py-3 px-6 rounded-lg bg-[#00adb5] text-white font-medium 
-              hover:bg-[#00959d] transition-all duration-300'>
-              {emailSubmitted ? 'Message Sent!' : 'Send Message'}
+              className='w-full bg-[#00adb5] hover:bg-[#008188] 
+              text-white font-medium py-3 rounded-lg transition-all duration-300 cursor-pointer'> 
+              Send Message
             </button>
           </form>
         </div>

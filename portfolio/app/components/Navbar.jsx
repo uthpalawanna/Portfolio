@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const navLinks = [
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#service', label: 'Service' },
   { href: '#contact', label: 'Contact' },
 ]
 
