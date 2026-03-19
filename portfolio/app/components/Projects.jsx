@@ -8,7 +8,7 @@ const PROJECT_DATA = [
   {
     id: 1,
     title: 'Portfolio',
-    description: 'A brief description of your first project.',
+    description: '',
     image: '/1.png',
     tag: ['All', 'web'],
     gitUrl: 'https://github.com/uthpalawanna/Portfolio.git',
@@ -17,7 +17,7 @@ const PROJECT_DATA = [
   {
     id: 2,
     title: 'Online-Learning-Platform',
-    description: 'A brief description of your second project.',
+    description: '',
     image: '/2.jpg',
     tag: ['All', 'web'],
     gitUrl: 'https://github.com/uthpalawanna/ACADEMIA-Online-Education-Learning-Platform.git',
@@ -26,7 +26,7 @@ const PROJECT_DATA = [
   {
     id: 3,
     title: 'Machine Learning + Web App',
-    description: 'A brief description of your third project.',
+    description: 'Using a Support Vector Machine (SVM) model trained on the PIMA Indians Diabetes Dataset (768 samples), the app predicts a patient's diabetes risk in real time based on key health indicators like glucose level, BMI, blood pressure, insulin, and more.',
     image: '/3.png',
     tag: ['All', 'machine learning'],
     gitUrl: 'https://github.com/uthpalawanna/Diabetes-Prediction-System.git',
@@ -35,7 +35,7 @@ const PROJECT_DATA = [
   {
     id: 4,
     title: 'Mobile Application',
-    description: 'A brief description of your fourth project.',
+    description: '',
     image: '/4.png',
     tag: ['All', 'mobile'],
     gitUrl: 'https://github.com',
@@ -44,7 +44,7 @@ const PROJECT_DATA = [
   {
     id: 5,
     title: 'Web Application',
-    description: 'A brief description of your fifth project.',
+    description: '',
     image: '/7.png',
     tag: ['All', 'web'],
     gitUrl: 'https://github.com',
