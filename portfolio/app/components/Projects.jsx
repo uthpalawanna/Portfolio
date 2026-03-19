@@ -26,7 +26,7 @@ const PROJECT_DATA = [
   {
     id: 3,
     title: 'Machine Learning + Web App',
-    description: 'Using a Support Vector Machine (SVM) model trained on the PIMA Indians Diabetes Dataset (768 samples), the app predicts a patient's diabetes risk in real time based on key health indicators like glucose level, BMI, blood pressure, insulin, and more.',
+    description: '',
     image: '/3.png',
     tag: ['All', 'machine learning'],
     gitUrl: 'https://github.com/uthpalawanna/Diabetes-Prediction-System.git',
