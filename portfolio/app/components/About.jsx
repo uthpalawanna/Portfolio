@@ -13,12 +13,12 @@ const TAB_DATA = [
   {
     id: 'education',
     title: 'Education',
-    content: ['BSc (Hons) in Software Engineering', 'NSBM Green University', '2023 - Present']
+    content: ['BSc (Hons) in Software Engineering - NSBM Green University (2023 - Present)']
   },
   {
     id: 'experience',
     title: 'Experience',
-    content: ['Frontend Developer - Company Name', 'Internship - Company Name']
+    content: ['Frontend Developer ', ]
   },
 ]
 
