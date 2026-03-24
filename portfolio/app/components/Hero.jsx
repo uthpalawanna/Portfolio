@@ -21,7 +21,7 @@ const Hero = () => {
         <div className='text-3xl sm:text-6xl lg:text-[66px] font-bold'>
           <TypeAnimation
             sequence={[
-              'Frontend Developer',
+              'Web Developer',
               1000,
               'Mobile Developer',
               1000,
@@ -38,9 +38,14 @@ const Hero = () => {
           <a href='#contact' className='px-10 py-3 rounded-full border border-white bg-[#1f1f1f] text-white flex items-center gap-2'>
             Contact Me
           </a>
-          <a href='' className='px-10 py-3 rounded-full border border-gray-500 text-gray-400 flex items-center gap-2'>
-            My Resume
-          </a>
+          
+        <a 
+          href='/resume.pdf' 
+          target='_blank'
+          download
+          className='px-10 py-3 rounded-full border border-gray-500 text-gray-400 flex items-center gap-2'>
+          My Resume
+        </a>
         </div>
       </div>
     </section>
