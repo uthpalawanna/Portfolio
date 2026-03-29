@@ -38,7 +38,7 @@ const PROJECT_DATA = [
     description: '',
     image: '/8.png',
     tag: ['All', 'machine learning'],
-    gitUrl: 'https://github.com/uthpalawanna/Diabetes-Prediction-System.git',
+    gitUrl: 'https://github.com/uthpalawanna/Movie-Rating-Prediction.git',
     previewUrl: 'https://example.com',
   },
   {
