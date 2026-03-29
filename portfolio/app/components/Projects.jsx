@@ -34,6 +34,15 @@ const PROJECT_DATA = [
   },
   {
     id: 4,
+    title: 'Machine Learning + Web App',
+    description: '',
+    image: '/8.png',
+    tag: ['All', 'machine learning'],
+    gitUrl: 'https://github.com/uthpalawanna/Diabetes-Prediction-System.git',
+    previewUrl: 'https://example.com',
+  },
+  {
+    id: 5,
     title: 'Mobile Application',
     description: '',
     image: '/4.png',
@@ -42,7 +51,7 @@ const PROJECT_DATA = [
     previewUrl: 'https://example.com',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Web Application',
     description: '',
     image: '/7.png',
