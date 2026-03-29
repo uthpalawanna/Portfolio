@@ -13,7 +13,10 @@ const TAB_DATA = [
   {
     id: 'education',
     title: 'Education',
-    content: ['BSc (Hons) in Software Engineering - NSBM Green University (2023 - Present)','GCE Advanced Level (A/L) - Dharmapala Vidyalaya, Pannipitiya (2020 - 2022(23))','GCE Ordinary Level (O/L) - Harischandra College, Negombo (2010 - 2020)','Certificate Course in English Language (CCEL) - IHRA – Colombo University (2023) ']
+    content: ['BSc (Hons) in Software Engineering - NSBM Green University (2023 - Present)', 
+      'Certificate Course in English Language (CCEL) - IHRA – Colombo University (2023) ', 
+      'GCE Advanced Level (A/L) - Dharmapala Vidyalaya, Pannipitiya (2020 - 2022(23))', 
+      'GCE Ordinary Level (O/L) - Harischandra College, Negombo (2010 - 2020)']
   },
   {
     id: 'experience',
