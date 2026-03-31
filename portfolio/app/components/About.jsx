@@ -8,7 +8,7 @@ const TAB_DATA = [
   {
     id: 'skills',
     title: 'Skills',
-    content: ['React.js', 'Next.js', 'React Native', 'Flutter', 'JavaScript', 'Tailwind CSS']
+    content: ['React.js', 'Next.js', 'Node.js', 'React Native', 'Flutter', 'Dart', 'JavaScript', 'Tailwind CSS']
   },
   {
     id: 'education',
