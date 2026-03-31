@@ -47,7 +47,7 @@ const PROJECT_DATA = [
     description: '',
     image: '/4.png',
     tag: ['All', 'mobile'],
-    gitUrl: 'https://github.com',
+    gitUrl: 'https://github.com/uthpalawanna/Rock-Paper-Scissors-Flutter-Mini-Game.git',
     previewUrl: 'https://example.com',
   },
   {
@@ -56,7 +56,16 @@ const PROJECT_DATA = [
     description: '',
     image: '/7.png',
     tag: ['All', 'web'],
-    gitUrl: 'https://github.com',
+    gitUrl: 'https://github.com/uthpalawanna/Coffee-Haven.git',
+    previewUrl: 'https://example.com',
+  },
+  {
+    id: 7,
+    title: 'Admin Dashboard',
+    description: '',
+    image: '/9.png',
+    tag: ['All', 'web'],
+    gitUrl: 'https://github.com/uthpalawanna/Admin-Dashboard.git',
     previewUrl: 'https://example.com',
   },
 ]
