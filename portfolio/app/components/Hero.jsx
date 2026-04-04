@@ -40,7 +40,7 @@ const Hero = () => {
           </a>
           
         <a 
-          href='/resume.pdf' 
+          href='/Uthpalawanna_Resume.pdf' 
           target='_blank'
           download
           className='px-10 py-3 rounded-full border border-gray-500 text-gray-400 flex items-center gap-2'>
